@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
+  useEffect(async () => {
+    await axios.get(
+      "https://hellolambda.netlify.app/.netlify/functions/setCount"
+    );
+  }, []);
+
   return (
     <nav className={classes.Navbar}>
       <div className={classes.container}>

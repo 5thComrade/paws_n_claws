@@ -1,5 +1,5 @@
 import classes from "./Home.module.css";
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import dogs from "../../assets/dogs.jpg";
 import cats from "../../assets/cats.jpg";
@@ -7,12 +7,10 @@ import axios from "axios";
 
 const Home = () => {
   const setContactCount = async () => {
-    await axios.get("/.netlify/functions/clickContact");
+    await axios.get(
+      "https://hellolambda.netlify.app/.netlify/functions/clickContact"
+    );
   };
-
-  useEffect(async () => {
-    await axios.get("/.netlify/functions/setCount");
-  }, []);
 
   return (
     <React.Fragment>
