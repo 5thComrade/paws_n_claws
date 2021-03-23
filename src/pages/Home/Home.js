@@ -7,11 +7,11 @@ import axios from "axios";
 
 const Home = () => {
   const setContactCount = async () => {
-    const contact = await axios.get("/.netlify/functions/clickContact");
+    await axios.get("/.netlify/functions/clickContact");
   };
 
   useEffect(async () => {
-    const res = await axios.get("/.netlify/functions/setCount");
+    await axios.get("/.netlify/functions/setCount");
   }, []);
 
   return (
