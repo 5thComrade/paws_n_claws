@@ -1,0 +1,45 @@
+.center {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  top: 20%;
+}
+
+.container {
+  padding: 0 2rem;
+  width: 100%;
+  color: var(--primary-orange);
+  font-family: var(--primary-font);
+}
+
+.container h1 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+  .container h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+  .container h1 {
+    font-size: 4rem;
+  }
+}
